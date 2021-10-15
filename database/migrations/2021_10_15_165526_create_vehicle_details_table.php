@@ -18,7 +18,16 @@ class CreateVehicleDetailsTable extends Migration
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('brand_id')->constrained('brands')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('category_id')->constrained('categories')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->string('model');
+            $table->string('color');
+            $table->integer('year');
+            $table->string('trans_type');
+            $table->string('license_no');
+            $table->string('availability_status');
+            $table->string('details');
+            $table->string('cost');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
