@@ -15,6 +15,9 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('rent_id')->constrained('rental_details')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->dateTime('payment_date');
             $table->timestamps();
         });
     }
