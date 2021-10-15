@@ -15,6 +15,9 @@ class CreatePenaltiesTable extends Migration
     {
         Schema::create('penalties', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('rent_id')->constrained('rental_details')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->integer('payment_fee');
+            $table->boolean('payment_status');
             $table->timestamps();
         });
     }
