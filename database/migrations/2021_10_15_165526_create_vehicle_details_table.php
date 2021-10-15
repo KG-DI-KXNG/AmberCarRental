@@ -13,8 +13,11 @@ class CreateVehicleDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('vehicle__details', function (Blueprint $table) {
+        Schema::create('vehicle_details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('brand_id')->constrained('brands')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
