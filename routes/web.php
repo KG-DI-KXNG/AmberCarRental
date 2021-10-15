@@ -17,7 +17,7 @@ use App\Http\Controllers\VehicleDetailController;
 |
 */
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->name('index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -25,11 +25,12 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-require __DIR__ . './home/home.php';
+require __DIR__ . '/home/home.php';
 
-require __DIR__ . './admin/admin.php';
 
-require __DIR__ . './associate/associate.php';
+require __DIR__ . '/admin/admin.php';
+
+require __DIR__ . '/associate/associate.php';
 
 Route::resource('Payment', PaymentController::class);
 Route::resource('Penalty', PenaltyController::class);

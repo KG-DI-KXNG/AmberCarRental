@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\PlanController;
-use App\Http\Controllers\Admin\AdminController
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\AdminRentalController;
