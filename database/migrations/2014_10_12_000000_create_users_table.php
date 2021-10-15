@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('roles');
-            $table->integer('plan_id');
+            $table->integer('roles');
+            $table->foreignId('plan_id')->constrained('plans')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('address');
             $table->string('phone');
             $table->string('id_image');
