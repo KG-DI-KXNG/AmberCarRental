@@ -8,5 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Penalty extends Model
 {
-    use HasFactory,SoftDeletes;
+    protected $fillable = [
+        'rent_id',
+        'payment_fee',
+        'payment_status',
+    ];
+
+    use HasFactory, SoftDeletes;
 }

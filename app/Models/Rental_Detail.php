@@ -10,5 +10,6 @@ class Rental_Detail extends Model
 {
     protected $table = 'vehicle_details';
 
-    use HasFactory,SoftDeletes;
+
+    use HasFactory, SoftDeletes;
 }

@@ -8,5 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Payment extends Model
 {
-    use HasFactory,SoftDeletes;
+    protected $fillable = [
+        'user_id',
+        'rent_id',
+        'payment_date',
+    ];
+
+    use HasFactory, SoftDeletes;
 }

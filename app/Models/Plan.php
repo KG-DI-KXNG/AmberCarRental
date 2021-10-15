@@ -8,5 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Plan extends Model
 {
-    use HasFactory,SoftDeletes;
+    protected $fillable = [
+        'name',
+        'price',
+        'limit',
+    ];
+
+    use HasFactory, SoftDeletes;
 }
