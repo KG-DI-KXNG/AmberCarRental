@@ -13,8 +13,15 @@ class CreateRentalDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rental__details', function (Blueprint $table) {
+        Schema::create('rental_details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('vd_id')->constrained('vehicle_details')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->integer('payment_fee');
+            $table->boolean('payment_status')->default(0);
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
+            $table->dateTime('return_date')->nullable();
             $table->timestamps();
         });
     }
