@@ -13,7 +13,7 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-          \App\Models\Plan::truncate();
+        //   \App\Models\Plan::truncate();
         \App\Models\Category::create(['category_name' => 'Car']);
         \App\Models\Category::create(['category_name' => 'Truck']);
         \App\Models\Category::create(['category_name' => 'Bus']);

@@ -13,7 +13,7 @@ class BrandSeeder extends Seeder
      */
     public function run()
     {
-           \App\Models\brand::truncate();
+        //    \App\Models\brand::truncate();
         \App\Models\Brand::create(['brand_name' => 'Bronze']);
         \App\Models\Brand::create(['brand_name' => 'Silver']);
         \App\Models\Brand::create(['brand_name' => 'Gold']);
