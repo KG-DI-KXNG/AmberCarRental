@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PenaltyController;
+use App\Http\Controllers\RentalDetailController;
+use App\Http\Controllers\VehicleDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -23,13 +25,13 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-require __DIR__ . './richard.php';
-require __DIR__ . './akeem.php';
-require __DIR__ . './bailey.php';
-require __DIR__ . './ezra.php';
-require __DIR__ . './javoneil.php';
-require __DIR__ . './kevando.php';
-require __DIR__ . './latoya.php';
-require __DIR__ . './olivia.php';
-require __DIR__ . './ronald.php';
-require __DIR__ . './grant.php';
+require __DIR__ . './home/home.php';
+
+require __DIR__ . './admin/admin.php';
+
+require __DIR__ . './associate/associate.php';
+
+Route::resource('Payment', PaymentController::class);
+Route::resource('Penalty', PenaltyController::class);
+Route::resource('RentalDetails', RentalDetailController::class);
+Route::resource('VehicleDetails', VehicleDetailController::class);
