@@ -24,28 +24,28 @@
             <div class="mt-7">
                 {{-- <x-label for="username" :value="__('Username')" /> --}}
 
-                <x-input id="username" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="text" name="username" :value="old('username')" required autofocus />
+                <x-input id="Full_name" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="text" name="username" placeholder="Full Name" :value="old('username')" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="mt-7">
                 {{-- <x-label for="email" :value="__('Email')" /> --}}
 
-                <x-input id="email" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="email" name="email" :value="old('email')" required />
+                <x-input id="email" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="email" name="email" placeholder="Email" :value="old('email')" required />
             </div>
 
              <!-- Address -->
              <div class="mt-7">
                 {{-- <x-label for="address" :value="__('Address')" /> --}}
 
-                <x-input id="address" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="text" name="address" :value="old('address')" required />
+                <x-input id="address" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="text" name="address" placeholder="Address" :value="old('address')" required />
             </div class="mt-7">
 
               <!-- Phone -->
               <div class="mt-7">
                 {{-- <x-label for="phone" :value="__('Contact #')" /> --}}
 
-                <x-input id="phone" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="number" name="phone" :value="old('name')" required />
+                <x-input id="phone" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="number" name="phone" placeholder="Phone Number":value="old('name')" required />
             </div>
 
               <!-- Id -->
@@ -66,19 +66,14 @@
             <div class="mt-7">
                 {{-- <x-label for="password" :value="__('Password')" /> --}}
 
-                <x-input id="password" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+                <x-input id="password" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="password" name="password" placeholder="Password" required autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-7">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                {{-- <x-label for="password_confirmation" :value="__('Confirm Password')" /> --}}
 
-                <x-input id="password_confirmation" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                                type="password"
-                                name="password_confirmation" required />
+                <x-input id="password_confirmation" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" type="password" name="password_confirmation" placeholder="Confirm Password" required />
             </div>
 
                 <x-button class="mt-7 bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
@@ -92,7 +87,6 @@
                 </a>
               </div>
             </div>  
-            
         </form>
       </div>
     </div>
