@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PenaltyController;
 use App\Http\Controllers\RentalDetailController;
-use App\Http\Controllers\VehicleDetailContoller;
+use App\Http\Controllers\VehicleDetailController;
 
 /*
 |--------------------------------------------------------------------------
