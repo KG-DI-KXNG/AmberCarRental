@@ -23,7 +23,7 @@ class CreateVehicleDetailsTable extends Migration
             $table->integer('year');
             $table->string('trans_type');
             $table->string('license_no');
-            $table->string('availability_status');
+            $table->string('availability_status')->default(1);
             $table->string('details');
             $table->string('cost');
             $table->timestamps();
